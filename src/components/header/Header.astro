@@ -1,0 +1,17 @@
+---
+import styles from './Header.module.css';
+import { dataNavigate } from '../../data/dataNavigate';
+const data = dataNavigate;
+---
+<h1>Welcome to My Landing Page</h1>
+<header class={styles.siteHeader}>
+  <nav class={styles.navMenu}>
+    <ul>
+      {dataNavigate.map((item) => (
+        <li >
+          <a href={item.link}>{item.name}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
