@@ -1,3 +1,11 @@
+---
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import { ClientRouter } from 'astro:transitions';
+---
+
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,9 +15,12 @@
 		
 		<meta name="generator" content={Astro.generator} />
 		<title>Landing Page</title>
+		<ClientRouter />
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 

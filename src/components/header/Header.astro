@@ -1,17 +1,17 @@
 ---
 import styles from './Header.module.css';
 import { dataNavigate } from '../../data/dataNavigate';
-const data = dataNavigate;
 ---
+
 <h1>Welcome to My Landing Page</h1>
 <header class={styles.siteHeader}>
   <nav class={styles.navMenu}>
-    
+   
       {dataNavigate.map((item) => (
-        <li >
+        <li>
           <a href={item.link}>{item.name}</a>
         </li>
       ))}
-    
+   
   </nav>
 </header>
