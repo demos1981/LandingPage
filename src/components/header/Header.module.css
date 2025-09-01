@@ -1,3 +1,9 @@
+.siteTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .siteHeader {
   display: flex;
   justify-content: center;

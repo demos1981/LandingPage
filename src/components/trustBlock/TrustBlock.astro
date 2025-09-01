@@ -1,0 +1,19 @@
+---
+import { dataTrustUsers } from '../../data/dataTrustUsers.ts';
+import { Image } from "astro:assets";
+import styles from './TrustBlock.module.css';
+
+---
+<section class={styles.trustSection}>
+  <h2>Нам довіряють</h2>
+  <p>Ваш успіх - наш пріоритет. Ми використовуємо наш великий досвід, щоб забезпечити виняткові результати.</p>
+  <div class={styles.trustBlock}>
+      {dataTrustUsers.map((user) => (
+        <li class={styles.trustItem}>
+          <Image class={styles.trustImage} src={user.img} alt={user.name}/>
+          <p>{user.name}</p>
+          <p class={styles.trustDescription}>{user.description}</p>
+        </li>
+      ))}
+  </div>
+</section>

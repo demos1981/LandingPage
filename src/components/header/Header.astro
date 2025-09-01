@@ -3,12 +3,12 @@ import styles from './Header.module.css';
 import { dataNavigate } from '../../data/dataNavigate';
 ---
 
-<h1>Welcome to My Landing Page</h1>
+<div class={styles.siteTitle}></div>
 <header class={styles.siteHeader}>
   <nav class={styles.navMenu}>
    
       {dataNavigate.map((item) => (
-        <li>
+        <li class={styles.navItem}>
           <a href={item.link}>{item.name}</a>
         </li>
       ))}
