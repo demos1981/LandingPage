@@ -1,13 +1,17 @@
-.siteTitle {
+/* .siteTitle {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .siteHeader {
+  font-family: "Bona Nova SC", serif;
+  font-weight: bold;
+  font-style: normal;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0;
 }
 .navMenu {
   list-style: none;

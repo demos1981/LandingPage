@@ -1,0 +1,14 @@
+.footerBlock {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.footerText {
+  font-size: 0.875rem;
+  color: #666;
+}

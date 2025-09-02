@@ -3,27 +3,17 @@
 ---
 import styles from './HeroBlock.module.css';
 import { Image } from 'astro:assets';
-import opacityUmbrella from '../../assets/opacityUmbrella.jpg';
-import rainbowUmbrella from '../../assets/rainbowUmbrella.jpg';
-import redUmbrella from '../../assets/redUmbrella.jpg';
-import whiteGirl from '../../assets/whiteGirl.jpg';
+import HeroSectionPhoto5 from '../../assets/HeroSectionPhoto5.jpg';
+
+
 ---
 
 <section class={styles.heroSection}>
-   
-    <div>
-        <h1> Будь впевненим навіть за поганої погоди...</h1>
-         <div>
-        <Image class={styles.heroImage} src={opacityUmbrella} alt="Opacity Umbrella" width={400} height={200}/>
-        <Image class={styles.heroImage} src={rainbowUmbrella} alt="Rainbow Umbrella" width={200} height={300}/>
+     
+         <div class={styles.heroImageBlock}>
+             <h1 class={styles.heroTitle}> Ваш стиль У будь яку погоду</h1>
+        <Image class={styles.heroImage} src={HeroSectionPhoto5} alt="Hero Section" />
         </div>
-         
-        <div>
-        
-        <Image class={styles.heroImage} src={whiteGirl} alt="White Girl" width={200} height={300}/>
-        <Image class={styles.heroImage} src={redUmbrella} alt="Red Umbrella" width={400} height={200}/>
-        </div>
-    </div>
 </section>
 
 
