@@ -1,7 +1,29 @@
 ---
 import styles from './ProductView.module.css';
+import { Image } from 'astro:assets';
+import photoUmbrella1 from '../../assets/photoUmbrella1.jpg';
+import photoUmbrella2 from '../../assets/photoUmbrella2.jpg';
+import photoUmbrella3 from '../../assets/photoUmbrella3.jpg';
+import photoUmbrella4 from '../../assets/photoUmbrella4.jpg';
+
 ---
 
 <section class={styles.productSection}>
     <h2 class={styles.productTitle}>Продукт</h2>
+    <div class={styles.productContainer}>
+        <Image src={photoUmbrella1} alt="Product Image" width={550} height={400} class={styles.productImage} />
+        <p class={styles.productDescription}>Опис продукту</p>
+    </div>
+      <div class={styles.productContainer}>
+        <p class={styles.productDescription}>Опис продукту</p>
+        <Image src={photoUmbrella2} alt="Product Image" width={650} height={400} class={styles.productImage} />
+    </div>
+      <div class={styles.productContainer}> 
+        <Image src={photoUmbrella3} alt="Product Image" width={650} height={400} class={styles.productImage} />
+        <p class={styles.productDescription}>Опис продукту</p>
+    </div>
+      <div class={styles.productContainer}>
+        <p class={styles.productDescription}>Опис продукту</p>
+        <Image src={photoUmbrella4} alt="Product Image" width={650} height={400} class={styles.productImage} />
+    </div>
 </section>
