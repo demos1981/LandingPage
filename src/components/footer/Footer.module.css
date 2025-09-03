@@ -3,8 +3,9 @@
   font-weight: 400;
   font-style: normal;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin: 0 2rem 0 0;
   padding: 1rem 0;
 }
 

@@ -1,4 +1,8 @@
 .productSection {
+  background-color: rgb(251, 225, 239);
+  color: #4f200d;
+  position: relative;
+  z-index: 2;
   font-family: "Bona Nova SC", serif;
   font-weight: 400;
   font-style: normal;
@@ -11,7 +15,52 @@
 .productContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  width: 100%;
+  width: 80%;
+}
+
+.productItem {
+  width: 10rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 2rem 4rem 2rem;
+}
+
+.productImage {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+.productDescription {
+  height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.productName {
+  height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.addToCartButton {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.addToCartButton:hover {
+  background-color: #ff1493;
 }

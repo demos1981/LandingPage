@@ -1,0 +1,13 @@
+---
+import styles from './HeroSection.module.css';
+import { Image } from "astro:assets";
+import umbrellaStart from "/src/assets/umbrellaStart.png";
+
+---
+
+<section class={styles.heroSection}>
+  <div class={styles.heroImageBlock}>
+    <Image class={styles.heroImage} src={umbrellaStart} alt="Hero Section" width={550}/>
+    <h2 class={styles.heroTitle}> Будь на стилі</h2>
+  </div>
+</section>

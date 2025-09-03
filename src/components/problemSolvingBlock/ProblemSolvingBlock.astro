@@ -1,7 +1,33 @@
 ---
 import styles from './ProblemSolvingBlock.module.css';
+
+
+
+
+import { Image } from 'astro:assets';
+import photoUmbrella10 from '../../assets/photoUmbrella10.jpg';
+import photoUmbrella20 from '../../assets/photoUmbrella20.jpg';
+import photoUmbrella30 from '../../assets/photoUmbrella30.jpg';
+import photoUmbrella40 from '../../assets/photoUmbrella40.jpg';
 ---
+
 
 <section class={styles.problemSection}>
     <h2 class={styles.problemTitle}>Проблема</h2>
+    <div class={styles.problemContainer}>
+        <Image src={photoUmbrella10} alt="Problem Image" width={550} height={400} class={styles.problemImage} />
+        <p class={styles.problemDescription}>Опис проблеми</p>
+    </div>
+      <div class={styles.problemContainer}>
+        <p class={styles.problemDescription}>Опис проблеми</p>
+        <Image src={photoUmbrella20} alt="Problem Image" width={650} height={400} class={styles.problemImage} />
+    </div>
+      <div class={styles.problemContainer}>
+        <Image src={photoUmbrella30} alt="Problem Image" width={650} height={400} class={styles.problemImage} />
+        <p class={styles.problemDescription}>Опис проблеми</p>
+    </div>
+      <div class={styles.problemContainer}>
+        <p class={styles.problemDescription}>Опис проблеми</p>
+        <Image src={photoUmbrella40} alt="Problem Image" width={650} height={400} class={styles.problemImage} />
+    </div>
 </section>

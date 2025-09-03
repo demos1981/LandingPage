@@ -1,8 +1,9 @@
 .heroSection {
   font-family: "Bona Nova SC", serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
-
+  position: fixed;
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -23,12 +24,13 @@
 .heroTitle {
   width: 300px;
   position: absolute; /* поверх изображения */
-  top: 30%; /* по центру вертикали */
-  left: 22%; /* по центру горизонтали */
+  top: 25%; /* по центру вертикали */
+  left: 11%; /* по центру горизонтали */
   transform: translate(-50%, -50%); /* ровно центр */
-  color: aliceblue;
+  color: #fbe1ef;
+
   text-align: center;
-  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   max-width: 80%;
   text-shadow: 2px 2px 2px aliceblue;
   /* max-width: 20rem;

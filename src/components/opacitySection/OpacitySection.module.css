@@ -1,0 +1,6 @@
+.opacitySection {
+  position: relative;
+  z-index: 3;
+  height: 40rem;
+  width: 100%;
+}
