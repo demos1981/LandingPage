@@ -13,7 +13,7 @@ export const dataProduct = [
   {
     id: 2,
     img: photoUmbrella20,
-    name: "Користувач 2",
+    name: "Парасолька 2",
     description: "Колір парасольки 2",
   },
   {

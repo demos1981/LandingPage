@@ -1,17 +1,16 @@
 ---
 import TrustBlock from '../trustBlock/TrustBlock.astro';
 import HeroBlock from '../heroBlock/HeroBlock.astro';
-import ProductView from '../productView/ProductView.astro';
+import ProductList from '../productList/ProductList.tsx';
 import ProblemSolvingBlock from '../problemSolvingBlock/ProblemSolvingBlock.astro';
 import HeroSection from '../heroSection/HeroSection.astro';
 import OpacitySection from '../opacitySection/OpacitySection.astro';
 ---
-<main>
-    
+<main> 
     <HeroBlock/>
     <HeroSection/>
     <OpacitySection/>
-    <ProductView/>
+    <ProductList client:only="react"/>
     <ProblemSolvingBlock/>
     <TrustBlock/>
 </main>

@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import OrderForm from '../../components/orderForm/OrderForm';
+import { dataProduct } from '../../data/dataProduct';
+
+// Генерация статических путей по ID
+export async function getStaticPaths() {
+  return dataProduct.map((product) => ({
+    params: { product: product.id.toString() },
+  }));
+}
+
+// Получение ID из URL
+const { product } = Astro.params;
+
+if (!product) {
+  throw new Error("Product ID is missing in the URL.");
+}
+
+// Преобразуем ID в число
+const productId = parseInt(product, 10);
+
+// Ищем товар по ID
+const selectedProduct = dataProduct.find((p) => p.id === productId);
+
+if (!selectedProduct) {
+  throw new Error(`Product with ID "${productId}" not found.`);
+}
+---
+
+<Layout>
+  <OrderForm
+    client:only="react"
+    productName={selectedProduct.name}
+  />
+</Layout>
