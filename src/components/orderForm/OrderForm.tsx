@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./OrderForm.module.css";
 
 type OrderFormProps = {
   productName: string;
@@ -44,21 +45,27 @@ export default function OrderForm({ productName }: OrderFormProps) {
         body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const result = await res.json(); // 👈 читаем ответ
+
+      if (res.ok && result.success) {
         alert("✅ Замовлення відправлено!");
       } else {
-        alert("❌ Помилка при відправці.");
+        console.error("❌ Відповідь з сервера:", result); // 👈 логим ошибку
+        alert(
+          "❌ Помилка при відправці: " + (result?.error || "невідома помилка")
+        );
       }
     } catch (err) {
-      alert("⚠️ Сервер недоступний.");
+      console.error("Сервер недоступен, ошибка:", err);
+      alert("⚠️ Сервер недоступний: " + String(err));
     }
   };
 
   return (
-    <div className="p-6 max-w-md mx-auto">
-      <h2 className="text-xl font-bold mb-4">Замовлення: {productName}</h2>
-      {error && <p className="text-red-500 mb-2">{error}</p>}
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Замовлення: {productName}</h2>
+      {error && <p className={styles.errorText}>{error}</p>}
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
           name="name"
           placeholder="Імʼя"
