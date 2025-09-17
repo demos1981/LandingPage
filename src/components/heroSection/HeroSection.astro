@@ -1,13 +1,33 @@
 ---
 import styles from './HeroSection.module.css';
 import { Image } from "astro:assets";
-import umbrellaStart from "/src/assets/umbrellaStart.png";
+import child from "/src/assets/child.jpg";
+import crossing from "/src/assets/crossing.jpg";
+import woman from "/src/assets/woman.jpg";
+import glassrain from "/src/assets/glasseRain2.jpg";
+
+
 
 ---
 
 <section class={styles.heroSection}>
+   
   <div class={styles.heroImageBlock}>
-    <Image class={styles.heroImage} src={umbrellaStart} alt="Hero Section" width={550}/>
-    <h2 class={styles.heroTitle}> Будь на стилі</h2>
+    <div>
+   <h2 class={styles.heroTitle}> Дощ,не привід сидіти вдома</h2>
+   </div>
+    <picture class={styles.heroPictureBlock}>
+      <div class={styles.heroImage1}>
+    <Image class={styles.heroImage} src={child} fetchpriority="high" decoding="async" alt="child" />
+     </div>
+    <div class={styles.heroImage2}>
+    <Image class={styles.heroImage} src={crossing} fetchpriority="high" decoding="async" alt="crossing">
+    </div>
+     <div class={styles.heroImage2}>
+    <Image class={styles.heroImage} src={woman} fetchpriority="high" decoding="async" alt="woman" />
+    </div>
+    </picture>
+
+    
   </div>
 </section>
