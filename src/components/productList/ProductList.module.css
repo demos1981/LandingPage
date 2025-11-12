@@ -35,6 +35,9 @@
   margin: 0 2rem 4rem 2rem;
 }
 
+.productTitle {
+  color: #7f8c8d;
+}
 .productImage {
   width: 10rem;
   height: 10rem;

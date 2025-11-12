@@ -4,7 +4,7 @@ import styles from "./ProductList.module.css";
 export default function ProductList() {
   return (
     <section className={styles.productSection}>
-      <h2 className={styles.productTitle}>Продукт</h2>
+      <h2 className={styles.productTitle}>Термобілизна</h2>
       <div className={styles.productContainer}>
         {dataProduct.map((product) => (
           <li key={product.id} className={styles.productItem}>
