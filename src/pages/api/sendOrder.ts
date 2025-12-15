@@ -38,6 +38,7 @@ export const POST: APIRoute = async ({ request }) => {
     console.log("✅ Полученные данные:", data); // 👈 логим данные формы
     const message = `
  Нове замовлення з лендінгу:
+ Розмір:${data.rozmir}
  Товар: ${data.product}
  Ім'я: ${data.name}
  Телефон: ${data.phone}
