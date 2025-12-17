@@ -9,6 +9,7 @@ export default function OrderForm({ productName }: OrderFormProps) {
   const [formData, setFormData] = useState({
     rozmir: "",
     name: "",
+    size: "",
     phone: "",
     city: "",
     postOffice: "",
@@ -23,6 +24,7 @@ export default function OrderForm({ productName }: OrderFormProps) {
   const validate = () => {
     if (!formData.rozmir.trim()) return "Вкажіть розмір";
     if (!formData.name.trim()) return "Введіть імʼя";
+    if (!formData.size.trim()) return "Вкажіть розмір";
     if (!/^\+?\d{10,13}$/.test(formData.phone))
       return "Введіть правильний номер телефону";
     if (!formData.city.trim()) return "Вкажіть місто";
@@ -83,8 +85,15 @@ export default function OrderForm({ productName }: OrderFormProps) {
           className="border p-2 rounded"
         />
         <input
+          name="size"
+          placeholder="Розмір термобілизни"
+          value={formData.size}
+          onChange={handleChange}
+          className="border p-2 rounded"
+        />
+        <input
           name="phone"
-          placeholder="+380XXXXXXXXX"
+          placeholder="Телефон"
           value={formData.phone}
           onChange={handleChange}
           className="border p-2 rounded"
@@ -98,7 +107,7 @@ export default function OrderForm({ productName }: OrderFormProps) {
         />
         <input
           name="postOffice"
-          placeholder="Відділення Нової пошти"
+          placeholder="Відділення Нової пошти "
           value={formData.postOffice}
           onChange={handleChange}
           className="border p-2 rounded"

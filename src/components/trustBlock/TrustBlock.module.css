@@ -21,8 +21,14 @@
   list-style-type: none;
   padding: 0;
 }
-
+.trustTitle {
+  color: #7f8c8d;
+}
+.trustDescription {
+  color: #7f8c8d;
+}
 .trustItem {
+  color: #7f8c8d;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -44,4 +50,18 @@
 .trustDescription {
   text-align: center;
   font-size: 0.875rem;
+}
+.trustReturnButton {
+  background-color: #ff69b4;
+
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.trustReturnButton a {
+  color: white;
+  text-decoration: none;
 }

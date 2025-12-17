@@ -1,0 +1,34 @@
+---
+import styles from './ProblemSolvingBlock.module.css';
+
+
+
+
+import { Image } from 'astro:assets';
+import photoUmbrella10 from '../../assets/izumit1.jpg';
+import photoUmbrella20 from '../../assets/izumit2.jpg';
+import photoUmbrella30 from '../../assets/izumit3.jpg';
+import photoUmbrella40 from '../../assets/izumit4.jpg';
+---
+
+
+<section class={styles.problemSection}>
+    <h2 class={styles.problemTitle}>Характеристики</h2>
+    <div class={styles.problemContainer}>
+        <Image src={photoUmbrella10} alt="Problem Image"  class={styles.problemImage} />
+        <p class={styles.problemDescription}>Відводить піт назовні</p>
+    </div>
+      <div class={styles.problemContainer}>
+        <p class={styles.problemDescription}>Зберігає тепло</p>
+        <Image src={photoUmbrella20} alt="Problem Image" width={650} height={400} class={styles.problemImage} />
+    </div>
+      <div class={styles.problemContainer}>
+        <Image src={photoUmbrella30} alt="Problem Image" width={650} height={400} class={styles.problemImage} />
+        <p class={styles.problemDescription}>Швидко сохне</p>
+    </div>
+      <div class={styles.problemContainer}>
+        <p class={styles.problemDescription}>Не сковує рухи</p>
+        <Image src={photoUmbrella40} alt="Problem Image" width={650} height={400} class={styles.problemImage} />
+    </div>
+    <button class={styles.returnButton}><a href="#thermo-block">Повернутися до термобілизни</a></button>
+</section>

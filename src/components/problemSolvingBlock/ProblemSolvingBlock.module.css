@@ -12,6 +12,12 @@
   padding: 2rem 0;
 }
 .problemContainer {
+  background-color: #c6beee;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: #7f8c8d;
+  font-size: larger;
+  font-weight: bold;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -19,7 +25,28 @@
   text-align: center;
   width: 80%;
 }
-
+.problemDescription {
+  width: 70%;
+}
+.problemImage {
+  max-width: 30%;
+  height: auto;
+  object-fit: contain;
+}
 .problemTitle {
   color: #7f8c8d;
+}
+.returnButton {
+  background-color: #ff69b4;
+
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.returnButton a {
+  color: white;
+  text-decoration: none;
 }

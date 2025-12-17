@@ -40,6 +40,7 @@ export const POST: APIRoute = async ({ request }) => {
  Нове замовлення з лендінгу:
  Розмір:${data.rozmir}
  Товар: ${data.product}
+ Розмір: ${data.size}
  Ім'я: ${data.name}
  Телефон: ${data.phone}
  Місто: ${data.city}
