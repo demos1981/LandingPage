@@ -4,17 +4,20 @@
   align-items: flex-end;
   position: relative;
   z-index: 3;
-  height: 89vh;
-  background-image: url("./src/assets/glasseRain2.jpg");
+  height: 92vh;
+  background-image: url("./src/assets/HeroSectionPhoto.jpg");
   background-size: cover;
   color: #4f200d;
 }
-.heroImageBlock {
+.heroPictureBlock {
   display: flex;
-  /* justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem; */
+  justify-content: flex-end;
+  flex-direction: column;
 }
+/* .heroImageBlock {
+  display: flex;
+
+} */
 .heroImage {
   border-radius: 10px;
   width: 207px;
