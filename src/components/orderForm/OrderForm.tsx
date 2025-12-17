@@ -7,6 +7,7 @@ type OrderFormProps = {
 
 export default function OrderForm({ productName }: OrderFormProps) {
   const [formData, setFormData] = useState({
+    rozmir: "",
     name: "",
     size: "",
     phone: "",
@@ -21,6 +22,7 @@ export default function OrderForm({ productName }: OrderFormProps) {
   };
 
   const validate = () => {
+    if (!formData.rozmir.trim()) return "Вкажіть розмір";
     if (!formData.name.trim()) return "Введіть імʼя";
     if (!formData.size.trim()) return "Вкажіть розмір";
     if (!/^\+?\d{10,13}$/.test(formData.phone))
@@ -68,6 +70,13 @@ export default function OrderForm({ productName }: OrderFormProps) {
       <h2 className={styles.formTitle}>Замовлення: {productName}</h2>
       {error && <p className={styles.errorText}>{error}</p>}
       <form onSubmit={handleSubmit} className={styles.form}>
+        <input
+          name="rozmir"
+          placeholder="Розмір"
+          value={formData.rozmir}
+          onChange={handleChange}
+          className="border p-2 rounded"
+        />
         <input
           name="name"
           placeholder="Імʼя"
